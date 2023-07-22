@@ -20,17 +20,14 @@ flatpickr(datetimePicker, {
     }
   },
 });
-
 const startBtn = document.querySelector("[data-start]");
 const timerDays = document.querySelector("[data-days]");
 const timerHours = document.querySelector("[data-hours]");
 const timerMinutes = document.querySelector("[data-minutes]");
 const timerSeconds = document.querySelector("[data-seconds]");
-
 function addLeadingZero(value) {
   return String(value).padStart(2, "0");
 }
-
 let countdownInterval;
 
 function startTimer() {
@@ -75,3 +72,7 @@ function startTimer() {
   countdownInterval = setInterval(updateTimer, 1000);
 }
 startBtn.addEventListener("click", startTimer);
+document.addEventListener("DOMContentLoaded", function () {
+  // Весь ваш код тут
+  // Включаючи ініціалізацію flatpickr та додавання обробників подій
+});

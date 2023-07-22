@@ -35,4 +35,3 @@ function stopColorChange() {
 // Додати обробник події для кнопок
 startBtn.addEventListener("click", startColorChange);
 stopBtn.addEventListener("click", stopColorChange);
-

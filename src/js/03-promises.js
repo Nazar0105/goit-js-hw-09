@@ -1,12 +1,3 @@
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-  if (shouldResolve) {
-    // Fulfill
-  } else {
-    // Reject
-  }
-}
-
 // Отримуємо форму
 const form = document.querySelector('.form');
 
@@ -26,7 +17,6 @@ form.addEventListener('submit', function (event) {
   // Викликаємо функцію для створення промісів
   createPromises(delay, step, amount);
 });
-
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
@@ -39,7 +29,6 @@ function createPromise(position, delay) {
     }, delay);
   });
 }
-
 function createPromises(delay, step, amount) {
   for (let i = 1; i <= amount; i++) {
     createPromise(i, delay)
@@ -53,4 +42,3 @@ function createPromises(delay, step, amount) {
     delay += step;
   }
 }
-
