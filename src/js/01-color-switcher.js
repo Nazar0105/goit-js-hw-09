@@ -35,3 +35,13 @@ function stopColorChange() {
 // Додати обробник події для кнопок
 startBtn.addEventListener("click", startColorChange);
 stopBtn.addEventListener("click", stopColorChange);
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+}
+
+function o() {
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+}
+
